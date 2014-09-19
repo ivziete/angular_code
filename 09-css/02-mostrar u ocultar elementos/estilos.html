@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <style>
+            div{
+                display: block;
+                height: 100px;
+                width: 100px;
+                border: solid 1px;
+                margin: 50px;
+                float: left;
+            }
+            hr{
+                clear: both;
+            }
+        </style>
+    </head>
+    
+    
+    <body ng-controller="SuperControlador">
+        
+        
+        
+        
+        
+        <p>
+            Yo controlo el estilo de mis aplicaciones con <span>AngularJS</span> 
+        </p>
+        
+         
+        
+        <hr>
+        
+        <button ng-click="verdes()"> Cambiar propiedades </button>
+        <button ng-click="cambiarClases()"> Cambiar clases </button>
+        
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js" ></script>
+        <script>
+            
+            function SuperControlador($scope){
+                
+               $scope.estilos = function(){
+                
+                   $scope.estiloA = {'background-color':'blue'}
+                   $scope.estiloB = {'background-color':'red'}
+               }
+               
+               $scope.verdes = function(){
+                
+                   $scope.estiloA = {'background-color':'green' , 'height':'200px'}
+                   $scope.estiloB = {'background-color':'green', 'height':'200px'}
+               }
+  
+            }
+            
+        </script>
+        
+    </body>
+</html>
